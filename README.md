@@ -1,4 +1,4 @@
-# University Chatbot Integration with Teams
+# Mac-FAQ-Chatbot
 
 ## Table of Contents
 
