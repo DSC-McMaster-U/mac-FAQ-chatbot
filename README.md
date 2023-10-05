@@ -1,74 +1,101 @@
-# University-Wide FAQ Chatbot
+# University Chatbot Integration with Teams
 
 ## Table of Contents
+
 - [Introduction](#introduction)
-- [Problem Statement](#problem-statement)
-- [Project Motivation](#project-motivation)
 - [Project Overview](#project-overview)
 - [Platform Details](#platform-details)
-- [Development & Interaction Workflow](#development--interaction-workflow)
-- [Timelines and Milestones](#timelines-and-milestones)
-
----
+- [Timeline and Milestones](#timeline-and-milestones)
+- [Next Stages and Enhancements](#next-stages-and-enhancements)
+- [System Flow](#system-flow)
 
 ## Introduction
-With the growing number of students and the diverse range of questions they have, it is essential to have an immediate, efficient, and effective system in place to answer their queries. The University-Wide FAQ Chatbot aims to bridge this gap and provide instant solutions to students.
 
-## Problem Statement
-Students often have to navigate multiple platforms, websites, and departments to find answers to their questions. This process can be time-consuming, and sometimes, they may not get the desired information.
-
-## Project Motivation
-To streamline the query-resolution process, reduce redundancy in seeking information, and enhance the student experience by offering instant, relevant answers.
+In today's digital age, chatbots have evolved as powerful tools for delivering immediate, personalized responses to users' queries. Leveraging the capabilities of chatbots, we aim to integrate a responsive and intuitive chatbot with popular university systems, specifically Microsoft Teams. This project seeks to harness the potential of chatbots to assist and enhance the user experience for students, faculty, and staff within the university ecosystem.
 
 ## Project Overview
-The Chatbot will:
-- Integrate with existing university systems.
-- Continuously learn from past student interactions.
-- Provide direct links to resources.
-- Incorporate a feedback mechanism for continuous improvement.
+
+Our state-of-the-art chatbot is designed with a vision to:
+
+- **Seamless Integration**: Integrate seamlessly with existing university systems such as Microsoft Teams and other platforms.
+- **Continuous Learning**: The chatbot will possess the ability to learn continuously from past interactions with students, optimizing the responses for future queries.
+- **Direct Resource Linking**: Instead of just providing information, the chatbot will provide direct links to necessary resources, making it easier for students and faculty to access them.
+- **Feedback Mechanism**: To ensure that the chatbot keeps evolving and improving, we'll incorporate a feedback mechanism, allowing users to provide their suggestions for improvements.
 
 ## Platform Details
 
-- **Coding Platform:** Local or cloud-based environment for Python and JavaScript development.
-- **Cloud Platform:** AWS/Azure/GCP (based on university preference and cost considerations).
-- **Prerequisites:**
-  - Python 3.x
-  - Node.js (for frontend)
-  - MySQL
-  - Docker
-- **Services:**
-  - NLP Service for chatbot intelligence.
-  - Web Hosting for the chatbot interface.
-  - API Gateway for university website and social media integration.
-- **Database:** MySQL for storing student queries, feedback, and chatbot responses.
-- **Container:** Docker for deployment and scaling.
-- **Storage:** Secure, encrypted storage in MySQL for chat logs and feedback.
-- **Languages:**
-  - **Backend:** Python
-  - **Frontend:** JavaScript (using a modern JS framework like React or Vue.js)
+### Techstack:
 
-## Development & Interaction Workflow
+- **Front End**: The chatbot will be integrated into platforms like Microsoft Teams and other systems using Google Cloud Dialogflow.
+- **Backend**: Our backend operations will be powered by Google Cloud's Cloud Functions, ensuring smooth and scalable operations.
+- **Database**: All data operations, storage, and retrieval will be managed through Google Cloud's BigQuery.
 
-1. Students initiate interactions via the chatbot on the university's website.
-2. The NLP service processes their query.
-3. The chatbot either fetches a relevant answer from the database or directs students to appropriate resources or departments.
-4. After receiving an answer, students can provide feedback for further enhancement of the system.
+## Timeline and Milestones
 
-## Timelines and Milestones
+1. **Database Design**: Craft a comprehensive database schema and diagram to support the chatbot's operations.
+2. **Cloud Function Development**: Work on developing cloud functions to handle the backend logic and integration between Dialogflow and BigQuery.
+3. **Dialogflow Training**: Spend quality time on training Dialogflow with diverse user inputs and scenarios to make it adept at handling varied student queries.
+4. **End-to-end Integration**: Once individual components are ready, integrate them to establish a complete working system.
+5. **Level 1 Testing**: Conduct initial rounds of testing to identify and rectify any issues or bugs in the system.
 
-| Week | Tasks |
-|------|-------|
-| 1 | Set up the development environment. Design the database schema. |
-| 2 | Begin backend API and NLP model development. |
-| 3 | Initiate frontend development. Integrate NLP model with backend. |
-| 4 | Test backend. Continue frontend development. |
-| 5 | Integrate frontend with backend. Start Dockerization. |
-| 6 | Full system testing. Implement the feedback mechanism. |
-| 7 | Deploy to cloud. Integrate with university platforms. |
-| 8 | Conduct beta testing. Fine-tune the application. |
-| 9 | Officially launch for all students. Address initial issues. |
-| 10+ | Monitor, collect feedback, and iterate for improvement. |
+## Next Stages and Enhancements
 
----
+As we move forward, we envision the following enhancements to our system:
 
-*Note:* This roadmap might undergo changes based on real-time challenges and feedback during the development process.
+- **Database Updates**: Regular updates to our database to include more information and improve response efficiency.
+- **Enhanced Resource Linking**: We aim to update and expand the list of resources the chatbot can link to, ensuring users have access to the most recent and relevant information.
+- **NLP Integration**: To make our chatbot more intuitive and user-friendly, we plan to incorporate more advanced Natural Language Processing techniques in the future.
+
+## System Flow:
+
+### 1. User Interaction
+
+```
+User
+|
+|---> Dialogflow Agent
+|
+|---> Detects Intent
+|
+|---> Requires Backend Processing?
+|
+|---> Yes: Send to Webhook (Cloud Function)
+|
+|---> No: Directly reply with predefined response
+```
+
+
+### 2. Backend Processing with Cloud Function
+
+```Cloud Function Webhook
+|
+|---> Processes Request from Dialogflow
+|
+|---> Interacts with Google Cloud BigQuery
+|
+|---> Formulate SQL Query
+|
+|---> Fetch Result
+|
+|---> Prepare Response for Dialogflow
+```
+
+
+
+### 3. Displaying the Result
+```
+Dialogflow
+|
+|---> Receives Response from Cloud Function
+|
+|---> Formats Response (Text or Rich Responses)
+|
+|---> Sends to User Interface (Teams, etc.)
+```
+
+### 4. User Sees the Result
+```
+User Interface (Teams, etc.)
+|
+|---> Displays the received message to the user
+```
