@@ -1,0 +1,33 @@
+[
+    {
+      "name": "faq_id",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": "The unique identifier for the FAQ"
+    },
+    {
+      "name": "question",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": "The extracted question"
+    },
+    {
+      "name": "answer",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": "The extracted answer in Markdown format"
+    },
+    {
+      "name": "related_topics",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": "List of related topics associated with the FAQ"
+    },
+    {
+      "name": "embeddings",
+      "type": "FLOAT64",
+      "mode": "REPEATED",
+      "description": "Vector embeddings of the FAQ content for semantic search"
+    }
+  ]
+  
