@@ -1,5 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
+
 def extract_top_n_keywords(doc, N):
     # Initialize TF-IDF Vectorizer
     vectorizer = TfidfVectorizer(stop_words='english', max_features=100)
