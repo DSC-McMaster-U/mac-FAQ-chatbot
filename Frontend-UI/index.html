@@ -1,0 +1,30 @@
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <title>Library</title>
+</head>
+
+<body>
+    <!-- <iframe src="https://library.mcmaster.ca" width=100% height=100%></iframe> -->
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+        chat-icon="https://i.postimg.cc/C1wXVX23/ChatIcon.png"
+        intent="WELCOME"
+        chat-title="Library FAQ"
+        agent-id="fe295cae-5d7d-4b15-b2e3-81c8d71770f5"
+        language-code="en"
+    ></df-messenger>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</body>
+
+<style>
+    df-messenger {
+     --df-messenger-button-titlebar-color: #851138;
+     /* Color for the chat dialog background. */
+     --df-messenger-chat-background-color: #f6efef; 
+     /* Color of the send icon in the text input box. */
+     --df-messenger-send-icon: #851138;
+     --df-messenger-user-message: #fdbf57;
+    }
+</style>
