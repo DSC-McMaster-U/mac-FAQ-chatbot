@@ -1,17 +1,28 @@
 # Mac-FAQ-Chatbot
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  ![DialogFlow](https://img.shields.io/badge/dialogflow-FF9800?style=for-the-badge&logo=dialogflow&logoColor=white) ![GitHUB](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+## Introduction
+
+In today's digital age, chatbots have evolved as powerful tools for delivering immediate, personalized responses to users' queries. Leveraging the capabilities of chatbots, we aim to integrate a responsive and intuitive chatbot with popular university systems, specifically Microsoft Teams. This project seeks to harness the potential of chatbots to assist and enhance the user experience for students, faculty, and staff within the university ecosystem.
+
+## Architecture
+![Image](Contributors/daig.png)
+
+
+
 
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Architecture](#architecture)
 - [Project Overview](#project-overview)
 - [Platform Details](#platform-details)
 - [Timeline and Milestones](#timeline-and-milestones)
 - [Next Stages and Enhancements](#next-stages-and-enhancements)
 - [System Flow](#system-flow)
+- [Contributors](#contributors)
 
-## Introduction
 
-In today's digital age, chatbots have evolved as powerful tools for delivering immediate, personalized responses to users' queries. Leveraging the capabilities of chatbots, we aim to integrate a responsive and intuitive chatbot with popular university systems, specifically Microsoft Teams. This project seeks to harness the potential of chatbots to assist and enhance the user experience for students, faculty, and staff within the university ecosystem.
 
 ## Project Overview
 
@@ -99,3 +110,14 @@ User Interface (Teams, etc.)
 |
 |---> Displays the received message to the user
 ```
+
+## Contributors
+| Contributor| Role | Notable Contributions 
+|----------|----------|----------|
+| <img src="Contributors/Dharmik_github.jpg" alt="Dharmik Joshi" width="100"/> <br/> **Dharmik Joshi** <br/>  | <i/> Cloud Architect/Project Manager </i> | <ul><li>Project Design,  Management and Documentation</li><li>Access Management and Troubleshooting</li><li> Worked on Integrations and Creating Cloud Services</li></ul>  |
+| <img src="Contributors/daniyal_github.jpg" alt="Daniyal  " width="100"/> <br/> **Daniyal**  <br/>|  <i/> Backend Developer</i>  | <ul><li>Created Rest API in google cloud to extract user query and intent from Dialogflow</li><li>Based on our query book, retrieved user answers from Big query and formatted the response data</li><li> Tested our end to end integration for further verification using various questions</li></ul>   |
+| <img src="Contributors/marwa_github.jpg" alt="Marwa Khafagy " width="100"/> <br/> **Marwa Khafagy**  <br/>|  <i/> Cloud Developer </i>  | <ul><li>Worked on Dialogflow intents and entities.</li><li>Worked on User interactions and Inputs</li></ul>  |
+| <br/> **Yunfei**  <br/>|  <i/> Database Developer</i>  | <ul><li>Created Automation scripts for scraping the websites for the FAQs</li><li>Wrote Integrations to upload the data scraped to the Google Cloud Bigquery</li><li> Formatted the data gathered in a key-words based format for better querying</li></ul>   |
+| <br/> **Stella Gu**  <br/>|  <i/> Backend Developer</i>  | <ul><li>Worked with cloud functions and databases to process user request</li><li>Created SQL queries to retrieve information based on user intents</li><li> Customized a frontend design for chatbot webpage integration</li></ul>   |
+| <br/> **Allison Zhao**  <br/>|  <i/> Backend Developer</i>  | <ul><li>Tested SQL queries for functionality and correctness</li><li>Worked with cloud functions and databases to process user request</li><li> Created SQL queries to retrieve information based on user intents</li></ul>   |
+| <br/> **Krish Panchal**  <br/>|  <i/> Cloud Developer</i>  | <ul><li>Made a query book to search through the cloud database and send results to Dialogflow</li><li>Worked on the cloud function for the new database</li></ul>   |
